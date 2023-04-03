@@ -1,0 +1,227 @@
+:root {
+  /* Color */
+  --text-color: #303030;
+  --white: #fff;
+  --accent: #ff6c00;
+  --subtitle-dark: rgba(157, 164, 189, 0.6);
+  --hero-info: #9da4bd;
+  --paragraph-color: #555555;
+  --price-color: #9da4bd;
+  --background: #f7f7f7;
+  --contacts-color: #9da4bd;
+
+  /* Fonts */
+  --primary-font: Open Sans, sans-serif;
+  --title-font: Raleway, sans-serif;
+}
+/* General */
+body {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  letter-spacing: 0.02em;
+  background-color: var(--white);
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.btn {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn-dark {
+  color: var(--white);
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent);
+  color: #fff;
+}
+header {
+  background-color: grey;
+}
+/* Nav */
+.navigation-item {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  color: var(--white);
+}
+.navigation-item:hover,
+.navigation-item:focus,
+.network-item:hover,
+.network-item:focus {
+  color: var(--accent);
+}
+.network-item {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: black;
+}
+/* Hero */
+.hero-subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--subtitle-dark);
+}
+.hero-title {
+  font-family: var(--title-font);
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  background-color: grey;
+  color: var(--white);
+}
+.hero-info {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--hero-info);
+}
+.btn-controls {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  color: var(--subtitle-dark);
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn-controls .btn-right {
+  text-align: right;
+}
+.btn-controls:hover,
+.btn-controls:focus {
+  color: var(--white);
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
+.title-section {
+  font-family: var(--title-font);
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+/* section 1 */
+.about {
+  font-size: 18px;
+  line-height: 1.67;
+  color: var(--paragraph-color);
+}
+.description {
+  font-size: 14px;
+  line-height: 1.86;
+  color: var(--paragraph-color);
+}
+/*Section 2  */
+.price {
+  background-color: grey;
+}
+.subtitle-dark {
+  color: var(--subtitle-dark);
+}
+.title-section.dark {
+  color: var(--white);
+}
+.services {
+  font-size: 18px;
+  line-height: 1.67;
+  color: var(--price-color);
+}
+.price-item {
+  text-align: right;
+}
+
+/* Section 3 */
+.benefits div {
+  background-color: var(--background);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.number {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.plus {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--accent);
+}
+.benefits-item {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+}
+/* Section 4 */
+.barbers {
+  background-color: var(--background);
+}
+.name {
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: center;
+}
+.position {
+  font-size: 14px;
+  line-height: 1.36;
+  color: var(--accent);
+  text-align: center;
+}
+/* Contacts */
+.contacts {
+  background-color: grey;
+}
+.address {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+  color: var(--contacts-color);
+}
+.contacts-item {
+  font-size: 18px;
+  line-height: 1.67;
+  display: flex;
+  align-items: center;
+  color: var(--contacts-color);
+}
+.work-time {
+  font-size: 18px;
+  line-height: 1.67;
+  color: var(--contacts-color);
+}
+
+/* Footer */
+.author {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: var(--contacts-color);
+}
