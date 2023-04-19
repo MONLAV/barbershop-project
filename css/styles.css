@@ -11,6 +11,7 @@
   --contacts-color: #9da4bd;
   --background-img: #111319;
   --background-hero: rgba(25, 28, 38, 0.2);
+  --line-dark: rgba(157, 164, 189, 0.6);
 
   /* Fonts */
   --primary-font: Open Sans, sans-serif;
@@ -92,7 +93,7 @@ ul {
   color: #fff;
 }
 .header {
-  background-color: grey;
+  background-color: var(--background-img);
 }
 /* Nav */
 .logo {
@@ -143,6 +144,9 @@ ul {
   color: black;
 }
 .hero-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -161,6 +165,13 @@ ul {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--hero-info);
+}
+.hero-subtitle::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--line-dark);
 }
 .btn-controls {
   font-family: var(--primary-font);
@@ -181,17 +192,24 @@ ul {
 }
 
 .subtitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
 }
-/* .subtitle::before {
+.subtitle::before {
   content: "";
+  display: block;
   width: 60px;
   height: 1px;
   background-color: var(--text-color);
-} */
+}
+.subtitle-dark::before {
+  background-color: var(--line-dark);
+}
 .title-section {
   font-family: var(--title-font);
   font-size: 42px;
@@ -261,10 +279,30 @@ ul {
   line-height: 1.67;
   color: var(--price-color);
   padding: 30px 20px;
+  width: 570px;
 }
+.services .prise {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
 .price-item {
-  /* text-align: right; */
-  margin-right: auto;
+  order: -1;
+}
+.services .prise::before {
+  content: "";
+  display: flex;
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(157, 164, 189, 0.2);
+}
+.price-list > li:first-child {
+  background-image: linear-gradient(#171a24, rgba(23, 26, 36, 0.2));
+}
+.price-list > li:last-child {
+  background: linear-gradient(#090b13, rgba(9, 11, 19, 0.2));
 }
 .price .btn {
   display: block;
@@ -344,10 +382,35 @@ ul {
 .gallery-list .item {
   width: calc((100% - 90px) / 4);
 }
-
+/* Online-booking */
+.booking {
+  flex-grow: 1;
+  width: 570px;
+}
+.main-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+.main-wrapper {
+  background-color: var(--background-img);
+  background-image: url(../img/contacts/bg-img1.png);
+  background-repeat: no-repeat;
+  background-position: top left calc(50% + 393px);
+}
 /* Contacts */
 .contacts {
-  background-color: grey;
+  flex-grow: 1;
+  width: 570px;
+  padding-left: 100px;
+}
+.contacts .title-section {
+  margin-bottom: 44px;
+}
+.contacts li {
+  margin-bottom: 20px;
+}
+.contacts li:last-child {
+  margin-bottom: 72px;
 }
 .address {
   font-weight: 700;
@@ -358,11 +421,11 @@ ul {
 .contacts-item {
   font-size: 18px;
   line-height: 1.67;
-  display: flex;
   align-items: center;
   color: var(--contacts-color);
 }
 .work-time {
+  margin-top: 20px;
   font-size: 18px;
   line-height: 1.67;
   color: var(--contacts-color);
@@ -374,4 +437,23 @@ ul {
   font-size: 11px;
   line-height: 1.36;
   color: var(--contacts-color);
+}
+.footer-link {
+  display: flex;
+  gap: 40px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-link::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--line-dark);
+}
+.footer .network-item {
+  display: block;
+  padding: 52px 0;
 }
