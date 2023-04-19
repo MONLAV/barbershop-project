@@ -46,6 +46,7 @@ body {
 }
 .link {
   text-decoration: none;
+  color: currentColor;
 }
 h1,
 h2,
@@ -92,6 +93,15 @@ ul {
   background-color: var(--accent);
   color: #fff;
 }
+.media::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--text-color);
+}
+.media-dark::before {
+  background-color: var(--line-dark);
+}
 .header {
   background-color: var(--background-img);
 }
@@ -130,11 +140,21 @@ ul {
 }
 
 /* Hero */
-.hero {
-  background-color: var(--background-hero);
-  padding-top: 174px;
-  padding-bottom: 208px;
+.hero .container {
+  display: flex;
 }
+.hero-right-side {
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 208px;
+  padding-left: 100px;
+  background-color: var(--background-hero);
+  background-image: url(../img/hero/bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .network-item {
   font-family: var(--primary-font);
   font-weight: 600;
@@ -166,9 +186,11 @@ ul {
   letter-spacing: 0.02em;
   color: var(--hero-info);
 }
-.hero-subtitle::before {
+.hero .network {
+}
+
+.subtitle-dark::before {
   content: "";
-  display: block;
   width: 60px;
   height: 1px;
   background-color: var(--line-dark);
@@ -200,16 +222,7 @@ ul {
   line-height: 1.36;
   text-transform: uppercase;
 }
-.subtitle::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 1px;
-  background-color: var(--text-color);
-}
-.subtitle-dark::before {
-  background-color: var(--line-dark);
-}
+
 .title-section {
   font-family: var(--title-font);
   font-size: 42px;
@@ -313,25 +326,57 @@ ul {
 /* Section 3 */
 .benefits .container {
   display: flex;
+  gap: 30px;
 }
-.benefits li {
+.benefits-left-side {
+  width: 570px;
+}
+.benefits-right-side {
+  width: 570px;
+}
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.benefits-list li {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px 24px;
+  text-align: center;
   background-color: var(--background);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
+.benefits-list li:nth-child(2n) {
+  margin-top: 30px;
+  margin-left: 30px;
+}
 .number {
+  position: relative;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.05em;
 }
-.plus {
+.number::after {
+  content: "\002B";
+  position: absolute;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  color: var(--accent);
+}
+/* .plus {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.38;
   text-align: center;
   color: var(--accent);
-}
+} */
 .benefits-item {
   font-weight: 600;
   font-size: 11px;
@@ -366,9 +411,36 @@ ul {
   margin-bottom: 3px;
 }
 .position {
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.36;
   color: var(--accent);
+}
+.main-networks {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.main-networks li {
+  width: 44px;
+  height: 44px;
+}
+.main-networks a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+.icons {
+  fill: currentColor;
+}
+.icons:hover,
+.icons:focus {
+  fill: var(--accent);
 }
 /* Gallery */
 .gallery .subtitle {
@@ -413,12 +485,18 @@ ul {
   margin-bottom: 72px;
 }
 .address {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.67;
   color: var(--contacts-color);
 }
 .contacts-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   font-size: 18px;
   line-height: 1.67;
   align-items: center;
@@ -430,7 +508,10 @@ ul {
   line-height: 1.67;
   color: var(--contacts-color);
 }
-
+.address-icon {
+  width: 24px;
+  height: 24px;
+}
 /* Footer */
 .author {
   font-weight: 600;
@@ -438,21 +519,17 @@ ul {
   line-height: 1.36;
   color: var(--contacts-color);
 }
-.footer-link {
+.network {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 .footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footer-link::before {
-  content: "";
-  width: 60px;
-  height: 1px;
-  background-color: var(--line-dark);
-}
+
 .footer .network-item {
   display: block;
   padding: 52px 0;
