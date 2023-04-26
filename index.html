@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@700&family=Open+Sans:wght@400;600;700;800&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    <!-- Animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Styles -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
@@ -27,7 +31,7 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="container">
+      <div class="header-container container">
         <a class="logo" href="./index.html">
           <img src="./img/logo.svg" alt="Logo" width="76"
         /></a>
@@ -54,18 +58,9 @@
     <main>
       <!-- Hero -->
       <section class="hero">
-        <div class="container">
+        <div class="hero-container container">
           <div class="hero-left-side">
             <ul class="network media list">
-              <!-- <li>
-                <a
-                  class="network-item link"
-                  href="https://www.youtube.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Youtube</a
-                >
-              </li>
               <li>
                 <a
                   class="network-item link"
@@ -74,7 +69,16 @@
                   rel="noopener noreferrer"
                   >Instagram</a
                 >
-              </li> -->
+              </li>
+              <li>
+                <a
+                  class="network-item link"
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Youtube</a
+                >
+              </li>
             </ul>
           </div>
           <div class="hero-right-side">
@@ -87,10 +91,17 @@
               carefully and with style.
             </p>
             <!-- Slider controls -->
-            <button class="btn-controls" type="button">Back</button>
-            <button class="btn-controls btn-right" type="button">
-              Forward
-            </button>
+            <ul class="slider-controls list">
+              <li><button class="btn-controls" type="button">Back</button></li>
+              <li>
+                <button
+                  class="btn-controls btn-right current-btn"
+                  type="button"
+                >
+                  Forward
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -98,16 +109,18 @@
       <section class="section" id="about">
         <div class="about-container container">
           <ul class="about-list list">
-            <li>
+            <li class="about-item">
               <img
+                class="about-img"
                 src="./img/section1/img1.jpg"
                 alt="Beard trim"
                 width="270"
                 height="475"
               />
             </li>
-            <li>
+            <li class="about-item">
               <img
+                class="about-img"
                 src="./img/section1/img2.jpg"
                 alt="Straight razor shave"
                 width="270"
@@ -141,7 +154,7 @@
           </p>
           <h2 class="title-section dark">Services and prices</h2>
           <ul class="price-list list">
-            <li>
+            <li data-aos="fade-right" data-aos-duration="800">
               <ul class="services list">
                 <li class="prise">
                   <span class="price-item"> Men&#39;s haircut </span> from 300
@@ -160,7 +173,7 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li data-aos="fade-left" data-aos-duration="800">
               <ul class="services list">
                 <li class="prise">
                   <span class="price-item"> Trainee&#39;s haircut</span>
@@ -191,24 +204,24 @@
         <div class="container">
           <div class="benefits-left-side">
             <ul class="benefits-list list">
-              <li>
+              <li data-aos="flip-up" data-aos-delay="300">
                 <p class="number">600</p>
                 <p class="benefits-item">Satisfied customers per day</p>
               </li>
 
-              <li>
+              <li data-aos="flip-up" data-aos-delay="600">
                 <p class="number">50</p>
                 <p class="benefits-item">Awards for excellent service</p>
               </li>
 
-              <li>
+              <li data-aos="flip-up" data-aos-delay="900">
                 <p class="number">20</p>
                 <p class="benefits-item">
                   Kyiv&#39;s best professional barbers
                 </p>
               </li>
 
-              <li>
+              <li data-aos="flip-up" data-aos-delay="1200">
                 <p class="number">100</p>
                 <p class="benefits-item">Gifts for regular customers</p>
               </li>
@@ -217,7 +230,7 @@
 
           <div class="benefits-right-side">
             <p class="subtitle media">Old traditional school</p>
-            <h2 class="title-section">Why people come to us?</h2>
+            <h2 class="title-section">Why people come to&nbsp;us?</h2>
             <p class="about">
               Only good things are said about us. But it's better to see and
               feel 1 time than read 10 times.
@@ -231,7 +244,7 @@
           <p class="subtitle media">For true enjoyers of the atmosphere</p>
           <h2 class="title-section">Our barbers</h2>
           <ul class="team-list list">
-            <li>
+            <li data-aos="zoom-in-up" data-aos-delay="300">
               <img
                 src="./img/team/img-1.jpg"
                 alt="Barber"
@@ -293,7 +306,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li data-aos="zoom-in-up" data-aos-delay="600">
               <img
                 src="./img/team/img-2.jpg"
                 alt="Barber"
@@ -356,7 +369,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li data-aos="zoom-in-up" data-aos-delay="900">
               <img
                 src="./img/team/img-3.jpg"
                 alt="Barber"
@@ -427,7 +440,7 @@
           <p class="subtitle media">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
-            <li class="item">
+            <li class="item" data-aos="flip-left" data-aos-delay="300">
               <img
                 src="./img/gallery/img-1.jpg"
                 alt="Photo services"
@@ -435,7 +448,7 @@
                 height="360"
               />
             </li>
-            <li class="item">
+            <li class="item" data-aos="flip-left" data-aos-delay="600">
               <img
                 src="./img/gallery/img-2.jpg"
                 alt="Photo services"
@@ -443,7 +456,7 @@
                 height="360"
               />
             </li>
-            <li class="item">
+            <li class="item" data-aos="flip-left" data-aos-delay="900">
               <img
                 src="./img/gallery/img-3.jpg"
                 alt="Photo services"
@@ -451,7 +464,7 @@
                 height="360"
               />
             </li>
-            <li class="item">
+            <li class="item" data-aos="flip-left" data-aos-delay="1200">
               <img
                 src="./img/gallery/img-4.jpg"
                 alt="Photo services"
@@ -525,23 +538,26 @@
           <li>
             <a
               class="network-item link"
-              href="https://www.youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Youtube</a
-            >
-          </li>
-          <li>
-            <a
-              class="network-item link"
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               >Instagram</a
             >
           </li>
+          <li>
+            <a
+              class="network-item link"
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Youtube</a
+            >
+          </li>
         </ul>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animation.js"></script>
   </body>
 </html>
