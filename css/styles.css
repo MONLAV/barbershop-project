@@ -53,6 +53,11 @@ body {
   text-decoration: none;
   color: currentColor;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 h1,
 h2,
 h3,
@@ -726,9 +731,16 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 .team-list li {
-  width: calc((100% - 60px) / 3);
+  width: calc((100% - 30px) / 1);
+}
+
+@media only screen and (min-width: 1200px) {
+  .team-list li {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .team-item {
   padding: 30px 0;
@@ -786,7 +798,17 @@ ul {
   gap: 30px;
 }
 .gallery-list .item {
-  width: calc((100% - 90px) / 4);
+  width: calc((100% - 30px) / 1);
+}
+@media only screen and (min-width: 768px) {
+  .gallery-list .item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gallery-list .item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 /* Online-booking */
 .booking {
@@ -801,6 +823,11 @@ ul {
   flex-wrap: wrap;
   gap: 44px 30px;
 }
+/* @media only screen and (max-width: 767px) {
+  .booking-form {
+    flex-direction: column;
+  }
+} */
 .booking-name {
   position: absolute;
   top: 8px;
@@ -831,6 +858,11 @@ ul {
   outline: none;
 
   transition: border-bottom-color var(--animation);
+}
+@media only screen and (max-width: 767px) {
+  .booking-input {
+    width: 100vw;
+  }
 }
 .booking-input:not(:placeholder-shown),
 .booking-input:focus {
@@ -875,17 +907,38 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 1199px) {
+  .main-wrapper .container {
+    flex-direction: column;
+  }
+}
 .main-wrapper {
   background-color: var(--background-img);
-  background-image: url(../img/contacts/bg-img1.png);
-  background-repeat: no-repeat;
-  background-position: top left calc(50% + 393px);
+}
+@media only screen and (min-width: 1200px) {
+  .main-wrapper {
+    background-image: url(../img/contacts/bg-img1.png);
+    background-repeat: no-repeat;
+    background-position: top left calc(50% + 393px);
+  }
 }
 /* Contacts */
 .contacts {
-  flex-grow: 1;
-  width: 570px;
   padding-left: 100px;
+}
+@media only screen and (max-width: 1199px) {
+  .contacts {
+    background-image: url(../img/contacts/bg-img1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contacts {
+    flex-grow: 1;
+    width: 570px;
+  }
 }
 .contacts .title-section {
   margin-bottom: 44px;
@@ -947,7 +1000,7 @@ ul {
   padding: 52px 0;
 }
 @media only screen and (max-width: 447px) {
-  .footer .media {
+  .footer .media::before {
     display: none;
   }
 }
