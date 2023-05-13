@@ -137,8 +137,9 @@ ul {
   position: fixed;
   top: 0;
   padding: 40px 0;
-  width: 100%;
+  width: 100vw;
   z-index: var(--z-index1);
+  margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
   .header {
@@ -476,14 +477,7 @@ ul {
 .about-item:hover .about-img {
   transform: scale(1.25);
 }
-/* .about-right-side {
-  width: 418px;
-} */
-/* @media only screen and (min-width: 768px) {
-  .about-right-side {
-    width: 330px;
-  }
-} */
+
 @media only screen and (min-width: 1200px) {
   .about-right-side {
     max-width: 470px;
@@ -954,7 +948,7 @@ ul {
   padding: 52px 0;
 }
 @media only screen and (max-width: 447px) {
-  .footer .media::before {
+  .footer .media {
     display: none;
   }
 }
