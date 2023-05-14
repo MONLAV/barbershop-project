@@ -122,22 +122,64 @@
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./img/section1/img1.jpg"
-                alt="Beard trim"
-                width="270"
-                height="475"
-              />
+              <picture>
+                <!-- Desktop screen-->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/section1/img-1_desk@1x.jpg 1x,
+                    ./img/section1/img-1_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/section1/img-1_tab@1x.jpg 1x,
+                    ./img/section1/img-1_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="about-img"
+                  src=" ./img/section1/img-1_desk@1x.jpg"
+                  alt="Beard trim"
+                  width="270"
+                  height="475"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./img/section1/img2.jpg"
-                alt="Straight razor shave"
-                width="270"
-                height="475"
-              />
+              <picture>
+                <!-- Desktop screen-->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/section1/img-2_desk@1x.jpg 1x,
+                    ./img/section1/img-2_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/section1/img-2_tab@1x.jpg 1x,
+                    ./img/section1/img-2_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="about-img"
+                  src=" ./img/section1/img-2_desk@1x.jpg"
+                  alt="Beard trim"
+                  width="270"
+                  height="475"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
           <div class="about-right-side">
@@ -258,10 +300,20 @@
           <ul class="team-list list">
             <li data-aos="zoom-in-up" data-aos-delay="100">
               <img
-                src="./img/team/img-1.jpg"
+                srcset="
+                  ./img/team/img-1_370.jpg 370w,
+                  ./img/team/img-1_418.jpg 418w,
+                  ./img/team/img-1_450.jpg 450w,
+                  ./img/team/img-1_740.jpg 740w,
+                  ./img/team/img-1_836.jpg 836w,
+                  ./img/team/img-1_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px,( min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./img/team/img-1_450.jpg"
                 alt="Barber"
-                width="370"
+                width="450"
                 height="346"
+                loading="lazy"
               />
               <div class="team-item">
                 <h3 class="name">John Smith</h3>
@@ -320,10 +372,20 @@
             </li>
             <li data-aos="zoom-in-up" data-aos-delay="200">
               <img
-                src="./img/team/img-2.jpg"
+                srcset="
+                  ./img/team/img-2_370.jpg 370w,
+                  ./img/team/img-2_418.jpg 418w,
+                  ./img/team/img-2_450.jpg 450w,
+                  ./img/team/img-2_740.jpg 740w,
+                  ./img/team/img-2_836.jpg 836w,
+                  ./img/team/img-2_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px,( min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./img/team/img-2_450.jpg"
                 alt="Barber"
-                width="370"
+                width="450"
                 height="346"
+                loading="lazy"
               />
 
               <div class="team-item">
@@ -383,10 +445,20 @@
             </li>
             <li data-aos="zoom-in-up" data-aos-delay="300">
               <img
-                src="./img/team/img-3.jpg"
+                srcset="
+                  ./img/team/img-3_370.jpg 370w,
+                  ./img/team/img-3_418.jpg 418w,
+                  ./img/team/img-3_450.jpg 450w,
+                  ./img/team/img-3_740.jpg 740w,
+                  ./img/team/img-3_836.jpg 836w,
+                  ./img/team/img-3_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px,( min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./img/team/img-3_450.jpg"
                 alt="Barber"
-                width="370"
+                width="450"
                 height="346"
+                loading="lazy"
               />
               <div class="team-item">
                 <h3 class="name">Alan Black</h3>
@@ -453,36 +525,256 @@
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li class="item" data-aos="flip-left" data-aos-delay="200">
-              <img
-                src="./img/gallery/img-1.jpg"
-                alt="Photo services"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen-->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/gallery/img-1_desk@1x.webp 1x,
+                    ./img/gallery/img-1_desk@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/gallery/img-1_desk@1x.jpg 1x,
+                    ./img/gallery/img-1_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/gallery/img-1_tab@1x.webp 1x,
+                    ./img/gallery/img-1_tab@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/gallery/img-1_tab@1x.jpg 1x,
+                    ./img/gallery/img-1_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- MObile screen -->
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./img/gallery/img-1_mob@1x.webp 1x,
+                    ./img/gallery/img-1_mob@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./img/gallery/img-1_mob@1x.jpg 1x,
+                    ./img/gallery/img-1_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="about-img"
+                  src=" ./img/gallery/img-1_mob@1x.jpg"
+                  alt="Beard trim"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="item" data-aos="flip-left" data-aos-delay="400">
-              <img
-                src="./img/gallery/img-2.jpg"
-                alt="Photo services"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen-->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/gallery/img-2_desk@1x.webp 1x,
+                    ./img/gallery/img-2_desk@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/gallery/img-2_desk@1x.jpg 1x,
+                    ./img/gallery/img-2_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/gallery/img-2_tab@1x.webp 1x,
+                    ./img/gallery/img-2_tab@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/gallery/img-2_tab@1x.jpg 1x,
+                    ./img/gallery/img-2_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- MObile screen -->
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./img/gallery/img-2_mob@1x.webp 1x,
+                    ./img/gallery/img-2_mob@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./img/gallery/img-2_mob@1x.jpg 1x,
+                    ./img/gallery/img-2_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="about-img"
+                  src=" ./img/gallery/img-2_mob@1x.jpg"
+                  alt="Beard trim"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="item" data-aos="flip-left" data-aos-delay="600">
-              <img
-                src="./img/gallery/img-3.jpg"
-                alt="Photo services"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen-->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/gallery/img-3_desk@1x.webp 1x,
+                    ./img/gallery/img-3_desk@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/gallery/img-3_desk@1x.jpg 1x,
+                    ./img/gallery/img-3_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/gallery/img-3_tab@1x.webp 1x,
+                    ./img/gallery/img-3_tab@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/gallery/img-3_tab@1x.jpg 1x,
+                    ./img/gallery/img-3_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- MObile screen -->
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./img/gallery/img-3_mob@1x.webp 1x,
+                    ./img/gallery/img-3_mob@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./img/gallery/img-3_mob@1x.jpg 1x,
+                    ./img/gallery/img-3_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="about-img"
+                  src=" ./img/gallery/img-3_mob@1x.jpg"
+                  alt="Beard trim"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="item" data-aos="flip-left" data-aos-delay="800">
-              <img
-                src="./img/gallery/img-4.jpg"
-                alt="Photo services"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen-->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/gallery/img-4_desk@1x.webp 1x,
+                    ./img/gallery/img-4_desk@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/gallery/img-4_desk@1x.jpg 1x,
+                    ./img/gallery/img-4_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/gallery/img-4_tab@1x.webp 1x,
+                    ./img/gallery/img-4_tab@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./img/gallery/img-4_tab@1x.jpg 1x,
+                    ./img/gallery/img-4_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- MObile screen -->
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./img/gallery/img-4_mob@1x.webp 1x,
+                    ./img/gallery/img-4_mob@2x.webp 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./img/gallery/img-4_mob@1x.jpg 1x,
+                    ./img/gallery/img-4_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="about-img"
+                  src=" ./img/gallery/img-4_mob@1x.jpg"
+                  alt="Beard trim"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
