@@ -167,14 +167,7 @@ ul {
   fill: var(--white);
   margin-right: auto;
 }
-.menu-toggle-icon {
-  stroke: var(--white);
-}
-@media only screen and (min-width: 768px) {
-  .btn-menu {
-    display: none;
-  }
-}
+
 @media only screen and (max-width: 1199px) {
   .logo {
     width: 56px;
@@ -1240,6 +1233,95 @@ ul {
   margin: 0 auto;
   justify-content: center;
   margin-top: 24px;
+}
+/**
+  |============================
+  | Mobile menu
+  |============================
+*/
+.menu-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+.menu-toggle-icon {
+  stroke: var(--white);
+}
+@media only screen and (min-width: 768px) {
+  .btn-menu {
+    display: none;
+  }
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
+  padding: 40px;
+  background-color: var(--background);
+  z-index: var(--z-index1);
+
+  transform: translateX(100%);
+  transition: transform var(--animation);
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 48px;
+  right: 31px;
+}
+.mobile-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mobile-menu .link,
+.mobile-menu + .nav-tel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+  color: var(--text-color);
+  text-decoration: none;
+}
+@media only screen and (max-width: 447px) {
+  .mobile-menu .link,
+  .mobile-menu + .nav-tel {
+    font-size: 13px;
+    line-height: 1.56;
+  }
+}
+.mobile-menu + .nav-tel {
+  margin-top: 64px;
+  margin-bottom: 24px;
+}
+.mobile-menu ~ .btn {
+  margin-bottom: 64px;
+}
+.mobile-menu ~ .network {
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /**
