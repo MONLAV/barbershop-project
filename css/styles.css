@@ -72,7 +72,6 @@ ul {
   max-width: 448px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid green;
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -677,7 +676,7 @@ ul {
 }
 @media only screen and (min-width: 1200px) {
   .benefits .container {
-    gap: 30px;
+    gap: 133px;
   }
 }
 .benefits .title-section {
@@ -713,8 +712,12 @@ ul {
   flex-wrap: wrap;
   align-items: flex-start;
   max-width: 370px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 320px) and (max-width: 447px) {
+  .benefits-list {
+    justify-content: center;
+  }
 }
 .benefits-list li {
   max-width: 170px;
@@ -723,6 +726,12 @@ ul {
   text-align: center;
   background-color: var(--background);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 320px) and (max-width: 447px) {
+  .benefits-list li {
+    max-width: 130px;
+    min-height: 130px;
+  }
 }
 .benefits-list li:nth-child(2n) {
   margin-top: 30px;
@@ -852,7 +861,11 @@ ul {
 /* Online-booking */
 .booking {
   flex-grow: 1;
-  width: 570px;
+}
+@media only screen and (min-width: 1200px) {
+  .booking {
+    width: 570px;
+  }
 }
 .booking .title-section {
   margin-bottom: 32px;
@@ -862,11 +875,7 @@ ul {
   flex-wrap: wrap;
   gap: 44px 30px;
 }
-/* @media only screen and (max-width: 767px) {
-  .booking-form {
-    flex-direction: column;
-  }
-} */
+
 .booking-name {
   position: absolute;
   top: 8px;
@@ -898,9 +907,19 @@ ul {
 
   transition: border-bottom-color var(--animation);
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .booking-input {
+    width: 330px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .booking-input {
-    width: 100vw;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 448px) {
+  .booking-input {
+    width: 285px;
   }
 }
 .booking-input:not(:placeholder-shown),
@@ -929,6 +948,22 @@ ul {
 
   transition: border-bottom-color var(--animation);
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .booking-message {
+    width: 690px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .booking-message {
+    max-width: 418px;
+  }
+}
+@media only screen and (max-width: 448px) {
+  .booking-message {
+    max-width: 285px;
+    height: 30px;
+  }
+}
 .booking-message:not(:placeholder-shown),
 .booking-message:focus {
   border-bottom-color: var(--white);
@@ -942,6 +977,7 @@ ul {
   color: var(--white);
   transform: translateY(-23px);
 }
+
 .main-wrapper .container {
   display: flex;
   justify-content: space-between;
@@ -963,7 +999,12 @@ ul {
 }
 /* Contacts */
 .contacts {
-  padding-left: 100px;
+  padding-left: 31px;
+}
+@media only screen and (min-width: 1200px) {
+  .contacts {
+    padding-left: 100px;
+  }
 }
 @media only screen and (max-width: 1199px) {
   .contacts {
@@ -977,6 +1018,12 @@ ul {
   .contacts {
     flex-grow: 1;
     width: 570px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrapper-contacts {
+    display: flex;
+    gap: 111px;
   }
 }
 .contacts .title-section {
@@ -1117,8 +1164,7 @@ ul {
   | Form in modal
   |============================
 */
-.modal-form-wrapper {
-}
+
 .modal-title {
   display: block;
   margin-bottom: 16px;
@@ -1129,8 +1175,7 @@ ul {
   letter-spacing: 0.02em;
   color: var(--background-img);
 }
-.modal-form {
-}
+
 .modal-form-name {
   margin-bottom: 6px;
   font-weight: 400;
@@ -1253,6 +1298,8 @@ ul {
   border: none;
   border-radius: 50%;
   outline: none;
+
+  transition: background-color var(--animation), color var(--animation);
 }
 .menu-toggle-icon {
   stroke: var(--white);
@@ -1266,21 +1313,26 @@ ul {
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
+.menu-container .menu-toggle:hover,
+.menu-container .menu-toggle:focus {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
 .menu-container {
   position: fixed;
   top: 0;
   right: 0;
-  width: 75%;
+  width: 100%;
   height: 100%;
   padding: 40px;
   background-color: var(--background);
   z-index: var(--z-index1);
 
-  transform: translateX(100%);
+  transform: translateY(-100%);
   transition: transform var(--animation);
 }
 .menu-container.is-open {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 .menu-container .menu-toggle {
   position: absolute;
@@ -1304,6 +1356,14 @@ ul {
   letter-spacing: 0.1em;
   color: var(--text-color);
   text-decoration: none;
+
+  transition: color var(--animation);
+}
+.mobile-menu .link:hover,
+.mobile-menu .link:focus,
+.mobile-menu + .nav-tel:hover,
+.mobile-menu + .nav-tel:focus {
+  color: var(--accent);
 }
 @media only screen and (max-width: 447px) {
   .mobile-menu .link,
@@ -1319,6 +1379,7 @@ ul {
 .mobile-menu ~ .btn {
   margin-bottom: 64px;
 }
+
 .mobile-menu ~ .network {
   flex-wrap: wrap;
   justify-content: flex-end;
