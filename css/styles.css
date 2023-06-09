@@ -1113,6 +1113,11 @@ ul {
   transition: opacity var(--animation), visibility var(--animation),
     pointer-events var(--animation), backdrop-filter var(--animation);
 }
+@media only screen and (max-width: 1199px) {
+  .backdrop {
+    display: none;
+  }
+}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
